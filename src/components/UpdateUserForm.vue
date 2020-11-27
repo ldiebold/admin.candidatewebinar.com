@@ -32,14 +32,13 @@
 </template>
 
 <script>
-import { User } from '@ldiebold/process-orm-classes'
 import SelectUserRole from 'components/SelectUserRole.vue'
 
 export default {
   props: {
     user: {
       required: true,
-      type: User
+      type: Object
     }
   },
 

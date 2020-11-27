@@ -61,13 +61,12 @@
 
 <script>
 import { BDateTime } from '@ldiebold/quasar-ui-process-base-components/src'
-import { OnlineEvent } from '@ldiebold/process-orm-classes'
 
 export default {
   props: {
     onlineEvent: {
       required: true,
-      type: OnlineEvent
+      type: Object
     }
   },
 
