@@ -11,6 +11,13 @@
         Users
       </div>
 
+      <CreateUserButton
+        round
+        icon="mdi-plus"
+        size="sm"
+        class="q-ml-md"
+      />
+
       <q-input
         class="q-ml-lg"
         dense
@@ -20,13 +27,6 @@
         autofocus
         clearable
         :debounce="150"
-      />
-
-      <q-space />
-
-      <CreateUserButton
-        round
-        icon="mdi-plus"
       />
     </template>
 

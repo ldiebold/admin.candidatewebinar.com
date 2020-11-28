@@ -1,6 +1,9 @@
 <template>
-  <q-page padding>
-    <OnlineEventsTable :online-events="online_events" />
+  <q-page>
+    <OnlineEventsTable
+      style="height: calc(100vh - 50px)"
+      :online-events="online_events"
+    />
   </q-page>
 </template>
 
