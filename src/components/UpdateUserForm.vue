@@ -21,7 +21,7 @@
       class="q-mb-md"
     />
 
-    <br />
+    <br>
 
     <q-btn
       label="Update"

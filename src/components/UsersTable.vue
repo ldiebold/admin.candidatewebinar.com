@@ -7,7 +7,9 @@
     :pagination="initialPagination"
   >
     <template #top>
-      <div class="text-h4 text-grey-8">Users</div>
+      <div class="text-h4 text-grey-8">
+        Users
+      </div>
 
       <q-input
         class="q-ml-lg"
@@ -18,7 +20,7 @@
         autofocus
         clearable
         :debounce="150"
-      ></q-input>
+      />
 
       <q-space />
 

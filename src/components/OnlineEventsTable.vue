@@ -1,28 +1,28 @@
 <template>
-    <RManageModelTable
-      :model-class="$MOnlineEvent"
-      role="admin"
-      :visible-columns="visibleColumns"
-    >
-      <template #create-button>
-        <RCreateButton
-          v-show="$MUser.getSessionUser().role === 'super admin'"
-          role="admin"
-          :model-class="$MOnlineEvent"
-          icon="mdi-plus"
-          class="q-ml-md"
-          size="sm"
-          round
-          color="primary"
-          :formProps="{
-            inputProps: {
-              filled: true,
-              class: ['q-my-sm']
-            }
-          }"
-        />
-      </template>
-    </RManageModelTable>
+  <RManageModelTable
+    :model-class="$MOnlineEvent"
+    role="admin"
+    :visible-columns="visibleColumns"
+  >
+    <template #create-button>
+      <RCreateButton
+        v-show="$MUser.getSessionUser().role === 'super admin'"
+        role="admin"
+        :model-class="$MOnlineEvent"
+        icon="mdi-plus"
+        class="q-ml-md"
+        size="sm"
+        round
+        color="primary"
+        :form-props="{
+          inputProps: {
+            filled: true,
+            class: ['q-my-sm']
+          }
+        }"
+      />
+    </template>
+  </RManageModelTable>
   <!-- <q-table
     v-bind="$attrs"
     v-on="$listeners"

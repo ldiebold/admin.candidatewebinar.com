@@ -46,7 +46,7 @@
       </template>
     </q-input>
 
-    <br />
+    <br>
 
     <q-btn
       label="Create"
