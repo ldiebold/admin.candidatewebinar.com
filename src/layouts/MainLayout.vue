@@ -18,8 +18,16 @@
           />
 
           <q-toolbar-title>
-            Quasar App
+            Admin
           </q-toolbar-title>
+
+          <MSelectAppButton
+            icon="mdi-apps"
+            dense
+            flat
+            current-app-name="admin"
+            :user="user"
+          />
 
           <q-btn
             flat
@@ -70,10 +78,11 @@
 </template>
 
 <script>
+import { MSelectAppButton } from '@ldiebold/quasar-ui-process-model-components/src'
 
 export default {
   name: 'MainLayout',
-  components: {},
+  components: { MSelectAppButton },
   methods: {
     handleLogout () {
       this.visible = false
@@ -93,6 +102,12 @@ export default {
     }, 400)
   },
 
+  computed: {
+    user () {
+      return this.$MUser.getSessionUser()
+    }
+  },
+
   data () {
     return {
       leftDrawerOpen: false,
@@ -101,16 +116,19 @@ export default {
 
       menuItems: [
         {
-          icon: 'person',
           label: 'Users',
           description: 'manage user accounts',
           to: '/users'
         },
         {
-          icon: 'calendar',
           label: 'Events',
           description: 'create and edit events',
           to: '/events'
+        },
+        {
+          label: 'Candidates',
+          description: 'manage candidate accounts',
+          to: '/candidates'
         }
       ]
     }

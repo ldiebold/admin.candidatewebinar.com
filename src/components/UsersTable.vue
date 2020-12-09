@@ -46,7 +46,7 @@
 
     <template #body-cell-delete="props">
       <td class="text-center">
-        <MDeleteButton
+        <RDeleteButton
           :model="props.row"
           v-if="canManageUser(props.row)"
           model-name="User"
@@ -62,7 +62,7 @@
 </template>
 
 <script>
-import { MDeleteButton } from '@ldiebold/quasar-ui-process-base-components/src'
+import { RDeleteButton } from '@agripath/quasar-ui-rest-components/src'
 import CreateUserButton from 'components/CreateUserButton.vue'
 import UpdateUserButton from 'components/UpdateUserButton.vue'
 
@@ -75,7 +75,7 @@ export default {
   },
 
   components: {
-    MDeleteButton,
+    RDeleteButton,
     CreateUserButton,
     UpdateUserButton
   },

@@ -51,7 +51,7 @@
       class="q-mb-md"
     />
 
-    <br />
+    <br>
 
     <q-btn
       label="Create"
@@ -62,7 +62,7 @@
 </template>
 
 <script>
-import { BDateTime } from '@ldiebold/quasar-ui-process-base-components/src'
+import { BDateTime } from '@agripath/quasar-ui-base-components/src'
 
 export default {
   props: {

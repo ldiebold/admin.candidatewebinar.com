@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@ldiebold/process-orm-classes": "^1.0.0",
-    "@ldiebold/quasar-ui-process-base-components": "^1.0.0",
+    "@agripath/quasar-ui-base-components": "^1.0.0",
     "@quasar/extras": "^1.0.0",
     "@vuex-orm/core": "^0.36.3",
     "axios": "^0.18.1",

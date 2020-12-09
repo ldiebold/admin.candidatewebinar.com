@@ -15,7 +15,7 @@
       class="q-mb-md"
     />
 
-    <BDateTime
+    <BDatetimeInput
       filled
       v-model="form.start_time"
       label="Start"
@@ -23,7 +23,7 @@
       today-btn
     />
 
-    <BDateTime
+    <BDatetimeInput
       filled
       v-model="form.end_time"
       label="End"
@@ -49,7 +49,7 @@
       class="q-mb-md"
     />
 
-    <br />
+    <br>
 
     <q-btn
       label="Update"
@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import { BDateTime } from '@ldiebold/quasar-ui-process-base-components/src'
+import { BDatetimeInput } from '@agripath/quasar-ui-process-base-components/src'
 
 export default {
   props: {
@@ -71,7 +71,7 @@ export default {
   },
 
   components: {
-    BDateTime
+    BDatetimeInput
   },
 
   computed: {
