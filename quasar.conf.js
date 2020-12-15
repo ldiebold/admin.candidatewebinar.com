@@ -25,7 +25,8 @@ module.exports = function (/* ctx */) {
       'registerModelAliases',
       'mapFormComponentTypes',
       'axios',
-      'dayjs'
+      'dayjs',
+      'RegisterGlobalComponents'
     ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css

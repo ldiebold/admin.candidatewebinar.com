@@ -3,7 +3,14 @@
     <UsersTable
       :users="users"
       style="height: calc(100vh - 50px)"
-    />
+    >
+      <template #top-right>
+        <MShowTutorialVideoButton
+          class="q-mr-sm"
+          title="Managing Users"
+        />
+      </template>
+    </UsersTable>
   </q-page>
 </template>
 

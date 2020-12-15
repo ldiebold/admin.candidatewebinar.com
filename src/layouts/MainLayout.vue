@@ -97,6 +97,8 @@ export default {
   },
 
   mounted () {
+    this.$MTutorialVideo.$get()
+
     setTimeout(() => {
       this.visible = true
     }, 400)
@@ -118,17 +120,26 @@ export default {
         {
           label: 'Users',
           description: 'manage user accounts',
-          to: '/users'
+          to: '/users',
+          role: 'admin'
         },
         {
           label: 'Events',
           description: 'create and edit events',
-          to: '/events'
+          to: '/events',
+          role: 'admin'
         },
         {
           label: 'Candidates',
           description: 'manage candidate accounts',
-          to: '/candidates'
+          to: '/candidates',
+          role: 'admin'
+        },
+        {
+          label: 'Tutorial Videos',
+          description: 'Teach IBOs the site',
+          to: '/tutorial-videos',
+          role: 'super admin'
         }
       ]
     }

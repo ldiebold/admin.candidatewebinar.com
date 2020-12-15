@@ -28,6 +28,10 @@
         clearable
         :debounce="150"
       />
+
+      <q-space />
+
+      <slot name="top-right" />
     </template>
 
     <template #body-cell-edit="props">

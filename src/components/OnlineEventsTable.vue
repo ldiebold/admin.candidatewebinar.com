@@ -16,6 +16,13 @@
       fields: ['title', 'description', 'start_time', 'end_time']
     }"
   >
+    <template #top-right>
+      <MShowTutorialVideoButton
+        class="q-mr-sm"
+        title="Managing Online Events"
+      />
+    </template>
+
     <template #body-cell-video_url="scope">
       <q-td>
         <q-btn
