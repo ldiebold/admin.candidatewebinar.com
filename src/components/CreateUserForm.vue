@@ -21,7 +21,7 @@
       class="q-mb-md"
     />
 
-    <q-input
+    <!-- <q-input
       filled
       :type="passwordVisible ? 'text' : 'password'"
       v-model="form.password"
@@ -44,7 +44,7 @@
           @click="generateRandomPassword"
         />
       </template>
-    </q-input>
+    </q-input> -->
 
     <br>
 
@@ -73,11 +73,11 @@ export default {
   },
 
   methods: {
-    generateRandomPassword () {
-      var pwdChars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-      var pwdLen = 10
-      this.form.password = Array(pwdLen).fill(pwdChars).map(function (x) { return x[Math.floor(Math.random() * x.length)] }).join('')
-    },
+    // generateRandomPassword () {
+    //   var pwdChars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+    //   var pwdLen = 10
+    //   this.form.password = Array(pwdLen).fill(pwdChars).map(function (x) { return x[Math.floor(Math.random() * x.length)] }).join('')
+    // },
 
     handleSubmit () {
       this.$MUser.$create(this.form)
@@ -97,13 +97,13 @@ export default {
 
   data () {
     return {
-      passwordVisible: false,
+      // passwordVisible: false,
 
       form: {
         name: null,
         email: null,
-        role: null,
-        password: null
+        role: null
+        // password: null
       }
     }
   }
