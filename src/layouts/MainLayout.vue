@@ -53,7 +53,7 @@
           </q-item-label>
 
           <q-item
-            v-for="item in menuItems"
+            v-for="item in availableMenuItems"
             :key="item.label"
             clickable
             :to="item.to"
@@ -107,6 +107,15 @@ export default {
   computed: {
     user () {
       return this.$MUser.getSessionUser()
+    },
+
+    availableMenuItems () {
+      return this.menuItems.filter(menuItem => {
+        if (menuItem.role === 'super admin') {
+          return this.user.role === 'super admin'
+        }
+        return true
+      })
     }
   },
 
