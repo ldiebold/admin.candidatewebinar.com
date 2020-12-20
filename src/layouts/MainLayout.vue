@@ -139,7 +139,7 @@ export default {
           role: 'admin'
         },
         {
-          label: 'Candidates',
+          label: 'Personal Candidates',
           description: 'manage candidate accounts',
           to: '/candidates',
           role: 'admin'
