@@ -1,8 +1,9 @@
 <template>
   <q-page>
-    <UsersTable
-      :users="users"
+    <MUsersTable
       style="height: calc(100vh - 50px)"
+      fetch
+      :role="$MUser.getSessionUser().role"
     >
       <template #top-right>
         <MShowTutorialVideoButton
@@ -10,34 +11,29 @@
           title="Managing Users"
         />
       </template>
-    </UsersTable>
+    </MUsersTable>
   </q-page>
 </template>
 
 <script>
-import UsersTable from 'components/UsersTable.vue'
+import { MUsersTable } from '@ldiebold/quasar-ui-process-model-components/src'
 
 export default {
   name: 'UsersPage',
 
   components: {
-    UsersTable
+    MUsersTable
   },
 
   data () {
-    return {
-
-    }
+    return {}
   },
 
   created () {
-    this.$MUser.$get()
   },
 
   computed: {
-    users () {
-      return this.$MUser.all()
-    }
+
   }
 }
 </script>
